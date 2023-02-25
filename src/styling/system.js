@@ -1,4 +1,5 @@
 import { Dimensions, StatusBar, StyleSheet } from "react-native";
+import { FONTS } from "./polices";
 
 export const STATUSBAR_HEIGHT = StatusBar.currentHeight;
 
@@ -48,7 +49,7 @@ export const APP_COLORS = StyleSheet.create({
     height: Dimensions.get("screen").height,
   },
   RED_COLOR: {
-    color: "#F55738",
+    color: "#E74020",
   },
 });
 
@@ -87,4 +88,9 @@ export const APP_STYLE = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  section_title: {
+    fontFamily: FONTS.pacificoRegular,
+    fontSize: 36,
+    color: APP_COLORS.PRIMARY_COLOR.color
+  }
 });

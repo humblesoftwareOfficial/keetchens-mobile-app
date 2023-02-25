@@ -66,6 +66,7 @@ const Tab = ({
           {/* {Boolean(isTabActive) && (
             <Entypo name="dot-single" size={24} color="#FFB100" />
           )} */}
+          <Entypo name="dot-single" size={24} color={isTabActive ? APP_COLORS.YELLOW_COLOR.color : APP_COLORS.LIGHT_COLOR.color} />
         </Animated.Text>
       </Animated.View>
     </TouchableOpacity>

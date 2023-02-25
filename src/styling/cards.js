@@ -142,4 +142,28 @@ export const PREVIEW_PLACE_CARD = StyleSheet.create({
     backgroundColor: APP_COLORS.WHITE_COLOR.color,
     minWidth: Math.ceil(Dimensions.get("window").height / 20),
   },
+  route_container: {
+    marginTop: 15,
+    borderRadius: 5,
+    borderWidth: 1,
+    padding: 5,
+    borderColor: APP_COLORS.YELLOW_COLOR.color,
+  },
+  map_icon: {
+    width: Math.ceil(Dimensions.get("window").width / 11),
+    height: Math.ceil(Dimensions.get("window").width / 11),
+    backgroundColor: APP_COLORS.WHITE_COLOR.color,
+    justifyContent: "center",
+    alignItems: "center"
+  }
 });
+
+export const ACCOUNT_INFOS_CARD_STYLE = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 25,
+    marginLeft: 10,
+    marginRight: 10,
+  }
+})

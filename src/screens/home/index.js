@@ -42,8 +42,8 @@ export default ({ navigation }) => {
       }}
     >
       <Tabs.Screen
-        name={VIEWS_NAME.Profile}
-        component={Profile}
+        name={VIEWS_NAME.Favorites}
+        component={Favorites}
         options={{
           tabBarLabel: "Favoris",
           tabBarIcon: ({ color, size, focused }) => (
@@ -70,8 +70,8 @@ export default ({ navigation }) => {
         }}
       />
       <Tabs.Screen
-        name={VIEWS_NAME.Favorites}
-        component={Favorites}
+        name={VIEWS_NAME.Profile}
+        component={Profile}
         options={{
           tabBarLabel: "Profil",
           tabBarIcon: ({ color, size, focused }) => (

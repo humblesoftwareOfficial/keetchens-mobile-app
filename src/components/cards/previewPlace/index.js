@@ -8,6 +8,7 @@ import BottomPlace from "../place/BottomPlace";
 import { APP_COLORS } from "../../../styling/system";
 import CustomButton from "../../buttons/CustomButton";
 import { formatPrice } from "../../../utils";
+import PlaceRoute from "./PlaceRoute";
 
 export default function PreviewPlace({ place, onClose }) {
   return (
@@ -35,18 +36,27 @@ export default function PreviewPlace({ place, onClose }) {
           </TouchableOpacity> */}
         </View>
       </View>
-      <ScrollView style={{ flex: 1, padding: 5, borderRadius: 15 }}>
+      <ScrollView
+        style={{ flex: 1, padding: 5, borderRadius: 15 }}
+        showsVerticalScrollIndicator={false}
+      >
         <HeaderPlaceCard data={place} />
         <View style={{ margin: 5 }}>
-        <BottomPlace
-          data={{
-            ...place,
-          }}
-          hideRightBottom
-          textColor={APP_COLORS.WHITE_COLOR.color}
-          priceColor={APP_COLORS.YELLOW_COLOR.color}
-        />
+          <BottomPlace
+            data={{
+              ...place,
+            }}
+            hideRightBottom
+            textColor={APP_COLORS.WHITE_COLOR.color}
+            priceColor={APP_COLORS.YELLOW_COLOR.color}
+          />
         </View>
+        <PlaceRoute
+          position={{
+            latitude: 14.7951475,
+            longitude: -17.325766,
+          }}
+        />
       </ScrollView>
       <View style={PREVIEW_PLACE_CARD.bottom}>
         <View style={PREVIEW_PLACE_CARD.leftBottom}>
