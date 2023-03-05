@@ -7,6 +7,9 @@ export const APP_COLORS = StyleSheet.create({
   PRIMARY_COLOR: {
     color: "#13292A",
   },
+  PRIMARY_LIGHT_COLOR: {
+    color: "#A3BB98",
+  },
   SECONDARY_COLOR: {
     color: "#988780",
   },
@@ -65,9 +68,9 @@ export const TAG_NAVIGATION_STYLE = StyleSheet.create({
 export const APP_STYLE = StyleSheet.create({
   container_waiting_load_finish: {
     justifyContent: "center",
-    marginTop: 50,
+    // marginTop: 50,
     flex: 1,
-    backgroundColor: "#000",
+    backgroundColor: APP_COLORS.WHITE_COLOR.color,
   },
   app_name: {
     color: APP_COLORS.YELLOW_COLOR.color,
@@ -89,8 +92,9 @@ export const APP_STYLE = StyleSheet.create({
     alignItems: "center",
   },
   section_title: {
-    fontFamily: FONTS.pacificoRegular,
-    fontSize: 36,
-    color: APP_COLORS.PRIMARY_COLOR.color
+    fontFamily: FONTS.bold,
+    // fontSize: 22,
+    color: APP_COLORS.PRIMARY_COLOR.color,
+    textAlign: "center"
   }
 });

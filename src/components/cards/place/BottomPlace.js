@@ -6,21 +6,33 @@ import {
   isFieldWithValue,
   renderIconProperties,
   renderStar,
+  truncateText,
 } from "../../../utils";
 import CustomButton from "../../buttons/CustomButton";
 import { APP_COLORS } from "../../../styling/system";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function BottomPlace({ data, hideRightBottom = false, textColor = "#000", priceColor = "#000" }) {
+export default function BottomPlace({
+  data,
+  hideRightBottom = false,
+  textColor = "#000",
+  priceColor = "#000",
+  limitedDescription = false,
+}) {
   // console.log({ data? })
 
   const renderPropreties = useCallback(() =>
     data?.properties?.map((value, index) => (
       <View style={PLACE_CARD_STYLE.property} key={value.code} nativeID={index}>
-        {renderIconProperties(value.label, textColor )}
-        <Text style={[PLACE_CARD_STYLE.property_label, {
-          color: textColor,
-        }]}>{`  ${value.label}`}</Text>
+        {renderIconProperties(value.label, textColor)}
+        <Text
+          style={[
+            PLACE_CARD_STYLE.property_label,
+            {
+              color: textColor,
+            },
+          ]}
+        >{`  ${value.label}`}</Text>
       </View>
     ))
   );
@@ -28,19 +40,38 @@ export default function BottomPlace({ data, hideRightBottom = false, textColor =
     <View style={PLACE_CARD_STYLE.bottom}>
       <View style={PLACE_CARD_STYLE.bottom_left}>
         <View style={PLACE_CARD_STYLE.details}>
-          <Text style={[PLACE_CARD_STYLE.address, {
-            color: textColor,
-          }]}>{data?.address}</Text>
+          <Text
+            style={[
+              PLACE_CARD_STYLE.address,
+              {
+                color: textColor,
+              },
+            ]}
+          >
+            {data?.address}
+          </Text>
           {isFieldWithValue(data?.description) && (
-            <Text style={[PLACE_CARD_STYLE.description, {
-              color: textColor,
-            }]}>{data?.description}</Text>
+            <Text
+              style={[
+                PLACE_CARD_STYLE.description,
+                {
+                  color: textColor,
+                },
+              ]}
+            >
+              {limitedDescription ? truncateText(data?.description, 75): data?.description}
+            </Text>
           )}
         </View>
         <View style={PLACE_CARD_STYLE.details}>
-          <Text style={[PLACE_CARD_STYLE.price, {
-            color: priceColor,
-          }]}>
+          <Text
+            style={[
+              PLACE_CARD_STYLE.price,
+              {
+                color: priceColor,
+              },
+            ]}
+          >
             {formatPrice(data?.price)} XOF
           </Text>
         </View>
@@ -56,7 +87,7 @@ export default function BottomPlace({ data, hideRightBottom = false, textColor =
           />
           <View style={PLACE_CARD_STYLE.ranking}>
             <Ionicons name="md-star-sharp" size={12} color={textColor} />
-            <Text style={{ color: textColor, }}>{data?.ranking}</Text>
+            <Text style={{ color: textColor }}>{data?.ranking}</Text>
           </View>
         </View>
       )}

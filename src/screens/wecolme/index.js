@@ -9,13 +9,8 @@ import { APP_STYLE, STATUSBAR_HEIGHT } from "../../styling/system";
 export default function WelcomPage({}) {
   return (
     <SafeAreaView style={[SAFE_AREA_VIEW.container]}>
-      {/* <CustomAppBar
-        barStyle="light-content"
-        height={Platform.OS === "android" ? 0 : STATUSBAR_HEIGHT}
-        backgroundColor="black"
-      /> */}
       <View style={APP_STYLE.container_waiting_load_finish}>
-        <BookingLoading />
+        <BookingLoading text="Bienvenue"/>
       </View>
     </SafeAreaView>
   );

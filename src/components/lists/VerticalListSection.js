@@ -22,6 +22,10 @@ const DATA = [
     ranking: 4.5,
     description: "Chambre avec salle de bain intérieur",
     address: "Cité Keur Gorgui, Dakar",
+    position: {
+      latitude: 14.7117548,
+      longitude: -17.4687682,
+    },
     price: "25000",
     medias: [
       {
@@ -58,6 +62,10 @@ const DATA = [
     ranking: 5,
     description: "Chambre de luxe (spacieuse)",
     address: "Mermoz, Dakar",
+    position: {
+      latitude: 14.7162563,
+      longitude: -17.4798573,
+    },
     price: "35000",
     medias: [
       {
@@ -94,6 +102,10 @@ const DATA = [
     ranking: 4,
     description: "",
     address: "Yoff Diamalaye, Dakar",
+    position: {
+      latitude: 14.760593,
+      longitude: -17.4702556,
+    },
     price: "20000",
     medias: [
       {
@@ -120,8 +132,12 @@ const DATA = [
     code: "code-4",
     label: "",
     ranking: 4,
-    description: "",
+    description: "Profitez de nos spacieuses Suites Royales, chacune bénéficiant de sa propre décoration combinant ambiance luxueuse et élégance sophistiquée. Climatisation, TV satellite, téléphone, wifi gratuit, salle de bains avec baignoire et douche, sèche cheveux, set de thé & café, coffre fort, lit king size, service de couverture du soir, meubles anciens, collections de tableaux et œuvres d'art, plafonds en bois, marbres, bois précieux, tadelakt, cuivres.",
     address: "Mermoz, Point E, Dakar",
+    position: {
+      latitude: 14.6971752,
+      longitude: -17.4653082,
+    },
     price: "30000",
     medias: [
       {
@@ -192,6 +208,7 @@ export default function VerticalListSection({
         data={item}
         key={item.code}
         onClick={onOpenPlace}
+        limitedDescription
         // onShowProfile={onShowProfile}
         // onShowPublicationImages={onShowPublicationImages}
       />

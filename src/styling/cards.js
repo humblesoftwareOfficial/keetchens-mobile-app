@@ -35,8 +35,8 @@ export const PLACE_CARD_STYLE = StyleSheet.create({
     fontFamily: FONTS.bold,
   },
   description: {
-    fontFamily: FONTS.regular,
-    marginTop: 2,
+    // fontFamily: FONTS.regular,
+    marginTop: 5,
   },
   price: {
     fontFamily: FONTS.bold,
@@ -67,7 +67,9 @@ export const CARD_MEDIA_LIST_STYLE = StyleSheet.create({
     width: Math.ceil(Dimensions.get("window").width / 11),
     height: Math.ceil(Dimensions.get("window").width / 11),
     margin: 5,
-    borderRadius: 4,
+    borderRadius: 50,
+    backgroundColor: APP_COLORS.LIGHT_COLOR.color,
+
   },
   footer_media: {
     marginTop: 5,
@@ -91,7 +93,7 @@ export const PREVIEW_PLACE_CARD = StyleSheet.create({
     marginBottom: 20,
     flexDirection: "row",
     borderTopWidth: 1,
-    borderColor: "#283B3B", //383939
+    borderColor: "#283B3B",
     alignItems: "center",
   },
   leftBottom: {
@@ -142,19 +144,46 @@ export const PREVIEW_PLACE_CARD = StyleSheet.create({
     backgroundColor: APP_COLORS.WHITE_COLOR.color,
     minWidth: Math.ceil(Dimensions.get("window").height / 20),
   },
+  route: {
+    borderTopWidth: 1,
+    borderColor: "#283B3B",
+  },
   route_container: {
-    marginTop: 15,
+    margin: 5,
     borderRadius: 5,
     borderWidth: 1,
     padding: 5,
-    borderColor: APP_COLORS.YELLOW_COLOR.color,
+    borderColor: APP_COLORS.WHITE_COLOR.color,
+    flexDirection: "row",
+    alignItems: "center",
+    // backgroundColor: APP_COLORS.WHITE_COLOR.color
   },
   map_icon: {
     width: Math.ceil(Dimensions.get("window").width / 11),
     height: Math.ceil(Dimensions.get("window").width / 11),
     backgroundColor: APP_COLORS.WHITE_COLOR.color,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    marginRight: 5,
+  },
+  map_right_icon: {
+    width: Math.ceil(Dimensions.get("window").width / 11),
+    height: Math.ceil(Dimensions.get("window").width / 11),
+    // borderRadius: 50,
+    // backgroundColor: APP_COLORS.WHITE_COLOR.color,
+    justifyContent: "center",
+    alignItems: "center",
+    // borderWidth: 1,
+    // borderColor: APP_COLORS.WHITE_COLOR.color
+  },
+  route_infos: {
+    color: APP_COLORS.WHITE_COLOR.color,
+    fontFamily: FONTS.bold,
+    // textAlign: "center"
+  },
+  route_infos_right_icon: {
+    // flex: 1,
+    flexDirection: "row-reverse"
   }
 });
 

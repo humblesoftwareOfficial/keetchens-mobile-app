@@ -5,7 +5,7 @@ import HeaderPlaceCard from "./HeaderPlace";
 import BottomPlace from "./BottomPlace";
 import { APP_COLORS } from "../../../styling/system";
 
-const PlaceCard = ({ data, onClick }) => {
+const PlaceCard = ({ data, onClick, limitedDescription = false }) => {
   return (
     <TouchableOpacity
       style={[
@@ -20,7 +20,7 @@ const PlaceCard = ({ data, onClick }) => {
       onPress={() => onClick && onClick(data)}
     >
       <HeaderPlaceCard data={data} onClick={onClick}/>
-      <BottomPlace data={data} />
+      <BottomPlace data={data} limitedDescription />
     </TouchableOpacity>
   );
 };

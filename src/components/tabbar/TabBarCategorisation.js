@@ -49,6 +49,7 @@ const Tab = ({
   };
   const textStyle = {
     color: styles?.textColor || "",
+    fontSize: 11
     // fontWeight: "bold",
   };
   return (
@@ -124,7 +125,7 @@ export default class TabBarCategorisation extends Component {
   _renderTab() {
     return (
       <TabBar
-        underlineColor={APP_COLORS.YELLOW_COLOR.color}
+        underlineColor={APP_COLORS.PRIMARY_COLOR.color}
         underlineHeight={4}
         tabBarStyle={{
           backgroundColor: "#FFF",

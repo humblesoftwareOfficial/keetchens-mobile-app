@@ -1,6 +1,6 @@
-import { View, Text, ScrollView, TouchableOpacity } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity, Linking } from "react-native";
 import React from "react";
-import { AntDesign, EvilIcons } from "@expo/vector-icons";
+import { AntDesign, EvilIcons, Ionicons } from "@expo/vector-icons";
 
 import { PREVIEW_PLACE_CARD } from "../../../styling/cards";
 import HeaderPlaceCard from "../place/HeaderPlace";
@@ -11,6 +11,16 @@ import { formatPrice } from "../../../utils";
 import PlaceRoute from "./PlaceRoute";
 
 export default function PreviewPlace({ place, onClose }) {
+
+  const callContact = () => {
+    const phone = "+221781054800" //
+    try {
+      Linking.openURL(`tel:${phone}`);
+    } catch (error) {
+      console.log({ error });
+    }
+  };
+
   return (
     <View style={PREVIEW_PLACE_CARD.container}>
       <View style={PREVIEW_PLACE_CARD.top}>
@@ -26,15 +36,20 @@ export default function PreviewPlace({ place, onClose }) {
             />
           </TouchableOpacity>
         </View>
-        <View style={PREVIEW_PLACE_CARD.top_right}>
-          {/* <TouchableOpacity style={PREVIEW_PLACE_CARD.top_option}>
-            <EvilIcons
-              name="close"
-              size={24}
+        {/* <View style={PREVIEW_PLACE_CARD.top_right}>
+          <TouchableOpacity style={[PREVIEW_PLACE_CARD.top_option, {
+            backgroundColor: APP_COLORS.PRIMARY_LIGHT_COLOR.color
+          }]}
+          onPress={callContact}
+          >
+            <Ionicons
+              name="call"
+              size={22}
               color={APP_COLORS.PRIMARY_COLOR.color}
             />
-          </TouchableOpacity> */}
-        </View>
+            <Text style={{ fontSize: 10 }}>{" Téléphoner "}</Text>
+          </TouchableOpacity>
+        </View> */}
       </View>
       <ScrollView
         style={{ flex: 1, padding: 5, borderRadius: 15 }}
@@ -51,13 +66,8 @@ export default function PreviewPlace({ place, onClose }) {
             priceColor={APP_COLORS.YELLOW_COLOR.color}
           />
         </View>
-        <PlaceRoute
-          position={{
-            latitude: 14.7951475,
-            longitude: -17.325766,
-          }}
-        />
       </ScrollView>
+      <PlaceRoute position={place.position} address={place.address} />
       <View style={PREVIEW_PLACE_CARD.bottom}>
         <View style={PREVIEW_PLACE_CARD.leftBottom}>
           <Text style={[PREVIEW_PLACE_CARD.price]}>

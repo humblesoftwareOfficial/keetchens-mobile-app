@@ -19,6 +19,7 @@ export const HEADER_STYLE = StyleSheet.create({
     flexDirection: "row-reverse",
     margin: 1,
     alignItems: "center",
+    backgroundColor: APP_COLORS.WHITE_COLOR.color,
   },
   center: {
     flex: 1,
@@ -30,11 +31,14 @@ export const HEADER_STYLE = StyleSheet.create({
   item: {
     margin: 2,
     borderRadius: 50,
-    backgroundColor: APP_COLORS.PRIMARY_COLOR.color,
+    backgroundColor: APP_COLORS.WHITE_COLOR.color,
     padding: 5,
     justifyContent: "center",
     alignItems: "center",
     minWidth: Math.ceil(Dimensions.get("window").height / 15),
+    flexDirection: "row",
+    borderWidth: 1,
+    borderColor: "#F3F3F3",
   },
   app_container: {
     marginLeft: 5,
@@ -43,10 +47,17 @@ export const HEADER_STYLE = StyleSheet.create({
   },
   appname: {
     color: APP_COLORS.PRIMARY_COLOR.color,
-    // fontFamily: FONTS.yesteryear,
-    // fontFamily: FONTS.sacramento,
+    fontFamily: FONTS.yesteryear,
+    fontSize: 20,
+  },
+  appname_cont: {
+    color: APP_COLORS.PRIMARY_COLOR.color,
     fontFamily: FONTS.pacificoRegular,
-    fontSize: 24,
+    fontSize: 16,
+  },
+  app_background: {
+    backgroundColor: APP_COLORS.PRIMARY_COLOR.color,
+    borderRadius: 50,
   },
   label_button: {
     color: APP_COLORS.YELLOW_COLOR.color,

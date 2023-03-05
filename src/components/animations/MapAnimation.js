@@ -2,17 +2,17 @@ import AnimatedLottieView from "lottie-react-native";
 import React from "react";
 import { Dimensions, StyleSheet, Text, View } from "react-native";
 
-import LOADING_ANIMATION from "../../assets/animations/booking_app_loading.json";
+import MAP_ANIMATION from "../../assets/animations/route_animation.json";
 import { APP_COLORS } from "../../styling/system";
 
-export default function BookingLoading({
+export default function MapAnimation({
   text = "Chargement ...",
   size = "small",
   color = APP_COLORS.PRIMARY_COLOR.color,
   flex = 1,
   loop = true,
-  width = Math.ceil(Dimensions.get("window").width / 3.5),
-  height = Math.ceil(Dimensions.get("window").width / 3.5),
+  width = Math.ceil(Dimensions.get("window").width / 5),
+  height = Math.ceil(Dimensions.get("window").width / 5),
   center = true,
 }) {
   return (
@@ -26,7 +26,7 @@ export default function BookingLoading({
       }}
     >
       <AnimatedLottieView
-        source={LOADING_ANIMATION}
+        source={MAP_ANIMATION}
         style={{
           width,
           height,
@@ -34,9 +34,6 @@ export default function BookingLoading({
         autoPlay
         loop={loop}
       />
-      <Text style={{
-        // fontFamily: FONTS.regular
-      }}>{text}</Text>
     </View>
   );
 }

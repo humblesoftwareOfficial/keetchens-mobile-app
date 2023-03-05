@@ -8,7 +8,11 @@ import MediaCard from "../medias/MediaCard";
 
 const WIDTH = Dimensions.get("screen").width;
 
-const MediasVerticalList = ({ data = [], onShowImage, activeOpacityImage = 1 }) => {
+const MediasVerticalList = ({
+  data = [],
+  onShowImage,
+  activeOpacityImage = 1,
+}) => {
   const [
     onEndReachedCalledDuringMomentum,
     setOnEndReachedCalledDuringMomentum,
@@ -23,7 +27,7 @@ const MediasVerticalList = ({ data = [], onShowImage, activeOpacityImage = 1 }) 
         style={[CARD_MEDIA_LIST_STYLE.container, { width: WIDTH }]}
         key={generateKey()}
         activeOpacity={activeOpacityImage}
-        onPress={() =>  onShowImage && onShowImage(item)}
+        onPress={() => onShowImage && onShowImage(item)}
       >
         <MediaCard
           square
