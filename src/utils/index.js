@@ -11,9 +11,12 @@ export const SCREENS_NAME = {
 };
 
 export const VIEWS_NAME = {
-  Discover: "Discover",
-  Favorites: "Favorites",
   Profile: "Profile",
+  Team: "Team",
+  Providers: "Providers",
+  Stock: "Stock",
+  Discover: "Discover",
+  Deliveries: "Deliveries",
 };
 
 export const generateKey = () => {

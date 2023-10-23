@@ -1,8 +1,8 @@
-import AnimatedLottieView from "lottie-react-native";
+// import AnimatedLottieView from "lottie-react-native";
 import React from "react";
 import { Dimensions, StyleSheet, Text, View } from "react-native";
 
-import LOADING_ANIMATION from "../../assets/animations/booking_app_loading.json";
+// import LOADING_ANIMATION from "../../assets/animations/booking_app_loading.json";
 import { APP_COLORS } from "../../styling/system";
 
 export default function BookingLoading({
@@ -25,7 +25,7 @@ export default function BookingLoading({
         }),
       }}
     >
-      <AnimatedLottieView
+      {/* <AnimatedLottieView
         source={LOADING_ANIMATION}
         style={{
           width,
@@ -33,7 +33,7 @@ export default function BookingLoading({
         }}
         autoPlay
         loop={loop}
-      />
+      /> */}
       <Text style={{
         // fontFamily: FONTS.regular
       }}>{text}</Text>

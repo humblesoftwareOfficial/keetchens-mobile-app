@@ -6,7 +6,7 @@ export const STATUSBAR_HEIGHT = StatusBar.currentHeight;
 export const SAFE_AREA_VIEW = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: APP_COLORS.WHITE_COLOR.color,
+    backgroundColor: APP_COLORS.LIGHT_COLOR.color,
     paddingTop: Platform.OS === "android" ? 25 : 0,
   },
 });

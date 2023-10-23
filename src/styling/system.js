@@ -5,13 +5,13 @@ export const STATUSBAR_HEIGHT = StatusBar.currentHeight;
 
 export const APP_COLORS = StyleSheet.create({
   PRIMARY_COLOR: {
-    color: "#13292A",
+    color: "#ED6B52", //ED6B52
   },
   PRIMARY_LIGHT_COLOR: {
-    color: "#A3BB98",
+    color: "rgba(237, 107, 82, 0.1)",
   },
   SECONDARY_COLOR: {
-    color: "#988780",
+    color: "#8E130C",
   },
   TERTIARY_COLOR: {
     color: "#E7DED9",
@@ -22,7 +22,9 @@ export const APP_COLORS = StyleSheet.create({
   WHITE_COLOR: {
     color: "#FFF",
   },
-
+  BLACK_COLOR: {
+    color: "#000",
+  },
   LIGHT_COLOR: {
     color: "#F8F8F8",
   },
@@ -93,8 +95,10 @@ export const APP_STYLE = StyleSheet.create({
   },
   section_title: {
     fontFamily: FONTS.bold,
-    // fontSize: 22,
-    color: APP_COLORS.PRIMARY_COLOR.color,
-    textAlign: "center"
+    fontSize: 22,
+    color: APP_COLORS.BLACK_COLOR.color,
+    // textAlign: "center"
+    marginTop: 10,
+    marginLeft: 15
   }
 });

@@ -69,7 +69,6 @@ export const CARD_MEDIA_LIST_STYLE = StyleSheet.create({
     margin: 5,
     borderRadius: 50,
     backgroundColor: APP_COLORS.LIGHT_COLOR.color,
-
   },
   footer_media: {
     marginTop: 5,
@@ -183,8 +182,8 @@ export const PREVIEW_PLACE_CARD = StyleSheet.create({
   },
   route_infos_right_icon: {
     // flex: 1,
-    flexDirection: "row-reverse"
-  }
+    flexDirection: "row-reverse",
+  },
 });
 
 export const ACCOUNT_INFOS_CARD_STYLE = StyleSheet.create({
@@ -194,5 +193,81 @@ export const ACCOUNT_INFOS_CARD_STYLE = StyleSheet.create({
     marginTop: 25,
     marginLeft: 10,
     marginRight: 10,
+  },
+});
+
+export const TEAM_MEMBER_CARD_STYLE = StyleSheet.create({
+  container: {
+    marginBottom: 5,
+    // borderBottomWidth: 1,
+    padding: 5,
+    borderColor: APP_COLORS.LIGHT_COLOR.color,
+    backgroundColor: APP_COLORS.WHITE_COLOR.color,
+  },
+  container_infos: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10,
+    marginLeft: 10,
+    marginRight: 10,
+  },
+  profile_image: {
+    height: Math.ceil(Dimensions.get("window").width / 10),
+    width: Math.ceil(Dimensions.get("window").width / 10),
+    borderWidth: 1,
+    borderColor: APP_COLORS.PRIMARY_COLOR.color,
+    // backgroundColor: APP_COLORS.PRIMARY_COLOR.color,
+    borderRadius: 50,
+    marginRight: 5,
+  },
+  role: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 5,
+    borderRadius: 5,
+    backgroundColor: APP_COLORS.PRIMARY_COLOR.color,
+  },
+  role_label: {
+    color: APP_COLORS.WHITE_COLOR.color,
+    fontSize: 10,
+  }
+});
+
+export const ARTICLE_CARD_STYLE = StyleSheet.create({
+  container: {
+    margin: 5,
+    padding: 5,
+    backgroundColor: APP_COLORS.WHITE_COLOR.color,
+    borderRadius: 15
+  },
+  container_infos: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10,
+    marginLeft: 10,
+    marginRight: 10,
+  },
+  article_image: {
+    height: Math.ceil(Dimensions.get("window").width / 8),
+    width: Math.ceil(Dimensions.get("window").width / 8),
+    // borderWidth: 1,
+    borderColor: APP_COLORS.PRIMARY_COLOR.color,
+    backgroundColor: APP_COLORS.PRIMARY_COLOR.color,
+    borderRadius: 15,
+    marginRight: 5,
+  },
+  stock_infos: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 2,
+    padding: 5,
+    borderRadius: 5,
+    backgroundColor: APP_COLORS.BLUE_COLOR.color,
+  },
+  infos_label: {
+    color: APP_COLORS.WHITE_COLOR.color,
+    fontSize: 10,
   }
 })

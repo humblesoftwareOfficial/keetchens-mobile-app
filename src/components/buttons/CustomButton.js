@@ -7,7 +7,7 @@ import { APP_COLORS } from "../../styling/system";
 export default function CustomButton({
   label,
   customWidth,
-  bgColor = APP_COLORS.YELLOW_COLOR.color,
+  bgColor = APP_COLORS.PRIMARY_COLOR.color,
   onClick = null,
   textColor = "white",
   borderColor = "",

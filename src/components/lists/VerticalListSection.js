@@ -132,7 +132,8 @@ const DATA = [
     code: "code-4",
     label: "",
     ranking: 4,
-    description: "Profitez de nos spacieuses Suites Royales, chacune bénéficiant de sa propre décoration combinant ambiance luxueuse et élégance sophistiquée. Climatisation, TV satellite, téléphone, wifi gratuit, salle de bains avec baignoire et douche, sèche cheveux, set de thé & café, coffre fort, lit king size, service de couverture du soir, meubles anciens, collections de tableaux et œuvres d'art, plafonds en bois, marbres, bois précieux, tadelakt, cuivres.",
+    description:
+      "Profitez de nos spacieuses Suites Royales, chacune bénéficiant de sa propre décoration combinant ambiance luxueuse et élégance sophistiquée. Climatisation, TV satellite, téléphone, wifi gratuit, salle de bains avec baignoire et douche, sèche cheveux, set de thé & café, coffre fort, lit king size, service de couverture du soir, meubles anciens, collections de tableaux et œuvres d'art, plafonds en bois, marbres, bois précieux, tadelakt, cuivres.",
     address: "Mermoz, Point E, Dakar",
     position: {
       latitude: 14.6971752,
@@ -198,9 +199,9 @@ export default function VerticalListSection({
     if (selectedPlace) {
       setOpenModal(true);
     } else {
-      setOpenModal(false)
+      setOpenModal(false);
     }
-  }, [selectedPlace])
+  }, [selectedPlace]);
 
   const renderItems = useCallback(
     ({ item, index }) => (
@@ -218,7 +219,7 @@ export default function VerticalListSection({
 
   const onOpenPlace = (place) => {
     setSelectedPlace(place);
-  }
+  };
 
   const keyExtractor = useCallback((item) => item.code, []);
 
@@ -244,7 +245,7 @@ export default function VerticalListSection({
   const closeModal = () => {
     setOpenModal(false);
     setSelectedPlace(null);
-  }
+  };
 
   return (
     <>
@@ -252,7 +253,7 @@ export default function VerticalListSection({
         <FullLoadingContainer />
       ) : (
         <FlatList
-          style={{ backgroundColor: APP_COLORS.LIGHT_COLOR.color }}
+          style={{ backgroundColor: APP_COLORS.WHITE_COLOR.color }}
           disableIntervalMomentum
           data={data || []}
           renderItem={renderItems}
@@ -293,9 +294,7 @@ export default function VerticalListSection({
         onClose={closeModal}
         backgroundColor={APP_COLORS.PRIMARY_COLOR.color}
         paddingHorizontal={0}
-        content={
-          <PreviewPlace place={selectedPlace} onClose={closeModal}/>
-        }
+        content={<PreviewPlace place={selectedPlace} onClose={closeModal} />}
         // minHeight={
         //   showPublicationImages ? MODAL_PIBLICATION_IMAGE : USER_PROFILE_PREVIEW
         // }

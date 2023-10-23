@@ -9,12 +9,12 @@ export default function Section({
 }) {
   return (
     <View style={{ flex: 1 }}>
-      <VerticalListSection
+      {/* <VerticalListSection
         // customHeader={<HorizontalListHistories />}
         navigation={navigation}
         section={section}
         // filterCategories={filterCategories}
-      />
+      /> */}
     </View>
   );
 }

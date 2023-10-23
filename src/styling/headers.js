@@ -8,7 +8,7 @@ export const HEADER_STYLE = StyleSheet.create({
     padding: 2,
     margin: 1,
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "center"
   },
   left: {
     flex: 1,
@@ -19,7 +19,6 @@ export const HEADER_STYLE = StyleSheet.create({
     flexDirection: "row-reverse",
     margin: 1,
     alignItems: "center",
-    backgroundColor: APP_COLORS.WHITE_COLOR.color,
   },
   center: {
     flex: 1,
@@ -31,7 +30,7 @@ export const HEADER_STYLE = StyleSheet.create({
   item: {
     margin: 2,
     borderRadius: 50,
-    backgroundColor: APP_COLORS.WHITE_COLOR.color,
+    backgroundColor: APP_COLORS.PRIMARY_COLOR.color,
     padding: 5,
     justifyContent: "center",
     alignItems: "center",
@@ -47,16 +46,16 @@ export const HEADER_STYLE = StyleSheet.create({
   },
   appname: {
     color: APP_COLORS.PRIMARY_COLOR.color,
-    fontFamily: FONTS.yesteryear,
-    fontSize: 20,
+    fontFamily: FONTS.snigletBold,
+    fontSize: 24,
   },
   appname_cont: {
     color: APP_COLORS.PRIMARY_COLOR.color,
-    fontFamily: FONTS.pacificoRegular,
-    fontSize: 16,
+    fontFamily: FONTS.snigletRegular,
+    fontSize: 20,
   },
   app_background: {
-    backgroundColor: APP_COLORS.PRIMARY_COLOR.color,
+    // backgroundColor: APP_COLORS.PRIMARY_COLOR.color,
     borderRadius: 50,
   },
   label_button: {

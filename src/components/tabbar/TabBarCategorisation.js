@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   View,
+  Text
 } from "react-native";
 
 import ScrollableTabView from "./__refacto";
@@ -19,9 +20,9 @@ import { Entypo } from "@expo/vector-icons";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    // backgroundColor: "#fff",
-    marginTop: -10,
+    // alignItems: "center",
+    backgroundColor: "#fff",
+    // marginTop: -10,
   },
 });
 
@@ -166,7 +167,7 @@ export default class TabBarCategorisation extends Component {
         {this.state.loading ? (
           <BookingLoading />
         ) : (
-          <View>
+          <View style={{ flex: 1}}>
             <ScrollableTabView
               renderTabBar={() => this._renderTab()}
               onScroll={(x) => this._scrollX.setValue(x)}

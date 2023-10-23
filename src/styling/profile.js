@@ -23,10 +23,10 @@ export const PROFILE_STYLE = StyleSheet.create({
   },
   profile_infos_name: {
     fontFamily: FONTS.bold,
-    color: APP_COLORS.PRIMARY_COLOR.color,
+    color: APP_COLORS.BLACK_COLOR.color,
   },
   profile_infos_phone: {
-    color: APP_COLORS.PRIMARY_COLOR.color,
+    color: APP_COLORS.BLACK_LIGHT_COLOR.color,
   },
   default_image: {
     flex: 1,

@@ -1,6 +1,6 @@
 import { loadAsync, useFonts } from "expo-font";
 import { useEffect, useState } from "react";
-import { Image, Platform } from "react-native";
+import { Image } from "react-native";
 import { RootSiblingParent } from "react-native-root-siblings";
 import {
   initialWindowMetrics,
@@ -8,6 +8,7 @@ import {
 } from "react-native-safe-area-context";
 import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 import { Asset } from "expo-asset";
+import * as NavigationBar from 'expo-navigation-bar';
 import {
   AntDesign,
   Entypo,
@@ -23,6 +24,7 @@ import {
 
 import WelcomPage from "./src/screens/wecolme";
 import Navigation from "./src/navigation";
+import { APP_COLORS } from "./src/styling/system";
 
 const theme = {
   ...DefaultTheme,
@@ -104,7 +106,7 @@ export default function App() {
     await Promise.all([...imageAssets, ...fontAssets]);
   };
 
-  // if (Platform.OS === "android") NavigationBar.setBackgroundColorAsync("#000");
+  if (Platform.OS === "android") NavigationBar.setBackgroundColorAsync(APP_COLORS.PRIMARY_COLOR.color);
 
   return (
     <PaperProvider theme={theme}>

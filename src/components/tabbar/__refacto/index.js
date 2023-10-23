@@ -477,5 +477,6 @@ const styles = StyleSheet.create({
   },
   scrollableContentAndroid: {
     flex: 1,
+    margin: 0
   },
 });

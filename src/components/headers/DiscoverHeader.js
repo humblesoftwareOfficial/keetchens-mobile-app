@@ -14,9 +14,9 @@ export default function DiscoverHeader({
     <View style={HEADER_STYLE.container}>
       <View style={HEADER_STYLE.left}>
         <View style={HEADER_STYLE.app_background}>
-          <TouchableOpacity style={[HEADER_STYLE.app_container, { margin: 5}]}>
-            <Text style={[HEADER_STYLE.appname, {color: APP_COLORS.WHITE_COLOR.color}]}>Perfect</Text>
-            <Text style={[HEADER_STYLE.appname_cont, {color: APP_COLORS.YELLOW_COLOR.color}]}>{" Housing"}</Text>
+          <TouchableOpacity style={[HEADER_STYLE.app_container, { marginLeft: 5}]}>
+            <Text style={[HEADER_STYLE.appname, {color: APP_COLORS.PRIMARY_COLOR.color}]}>K</Text>
+            <Text style={[HEADER_STYLE.appname_cont, {color: APP_COLORS.PRIMARY_COLOR.color}]}>{"eetchens"}</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -28,13 +28,13 @@ export default function DiscoverHeader({
             color={APP_COLORS.YELLOW_COLOR.color}
           />
         </TouchableOpacity> */}
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={HEADER_STYLE.item}
-          //   onPress={() => onShowFilter && onShowFilter()}
+            onPress={() => onShowFilter && onShowFilter()}
         >
           <Ionicons name="options-outline" size={20} color={APP_COLORS.PRIMARY_COLOR.color} />
           <Text style={{ color: APP_COLORS.PRIMARY_COLOR.color }}>Filtres / Recherche</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     </View>
   );

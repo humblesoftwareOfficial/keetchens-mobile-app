@@ -23,7 +23,7 @@ export default function BottomPlace({
 
   const renderPropreties = useCallback(() =>
     data?.properties?.map((value, index) => (
-      <View style={PLACE_CARD_STYLE.property} key={value.code} nativeID={index}>
+      <View style={PLACE_CARD_STYLE.property} key={value.code}>
         {renderIconProperties(value.label, textColor)}
         <Text
           style={[
@@ -59,7 +59,9 @@ export default function BottomPlace({
                 },
               ]}
             >
-              {limitedDescription ? truncateText(data?.description, 75): data?.description}
+              {limitedDescription
+                ? truncateText(data?.description, 75)
+                : data?.description}
             </Text>
           )}
         </View>
